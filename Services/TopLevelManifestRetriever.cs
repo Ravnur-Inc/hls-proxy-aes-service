@@ -24,7 +24,7 @@ namespace Hls.Proxy.Aes.Services
                 {
                     using (var reader = new StreamReader(stream))
                     {
-                        const string qualityLevelRegex = @"(QualityLevels\(\d+\)/Manifest\(.+\))";
+                        const string qualityLevelRegex = @"(index-[-\w]+?\.m3u8)";
 
                         var toplevelmanifestcontent = reader.ReadToEnd();
 
